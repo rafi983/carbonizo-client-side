@@ -15,7 +15,7 @@ const MyOrders = () => {
   const [spinnerLoading, setSpinnerLoading] = useState(false);
 
   useEffect(() => {
-    fetch(`https://quiet-hamlet-36668.herokuapp.com/myorders/${user?.email}`)
+    fetch(`https://carbonizo-server-side.onrender.com/myorders/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setOrderedCar(data);
@@ -26,7 +26,7 @@ const MyOrders = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure, you want to delete?");
     if (proceed) {
-      fetch(`https://quiet-hamlet-36668.herokuapp.com/myorders/${id}`, {
+      fetch(`https://carbonizo-server-side.onrender.com/myorders/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

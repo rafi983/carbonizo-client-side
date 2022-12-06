@@ -20,7 +20,7 @@ const Explore = () => {
   const [spinnerLoading, setSpinnerLoading] = useState(false);
 
   useEffect(() => {
-    fetch("https://quiet-hamlet-36668.herokuapp.com/allcars")
+    fetch("https://carbonizo-server-side.onrender.com/allcars")
       .then((res) => res.json())
       .then((data) => {
         setAllCars(data);

@@ -13,7 +13,7 @@ const ManageAllOrders = () => {
   const [spinnerLoading, setSpinnerLoading] = useState(false);
 
   useEffect(() => {
-    fetch("https://quiet-hamlet-36668.herokuapp.com/allorders")
+    fetch("https://carbonizo-server-side.onrender.com/allorders")
       .then((res) => res.json())
       .then((data) => {
         setAllOrders(data);
@@ -22,7 +22,7 @@ const ManageAllOrders = () => {
   }, [allOrders]);
 
   const handleStatus = (id) => {
-    fetch(`https://quiet-hamlet-36668.herokuapp.com/allorders/${id}`, {
+    fetch(`https://carbonizo-server-side.onrender.com/allorders/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -42,7 +42,7 @@ const ManageAllOrders = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure, you want to delete?");
     if (proceed) {
-      fetch(`https://quiet-hamlet-36668.herokuapp.com/allorders/${id}`, {
+      fetch(`https://carbonizo-server-side.onrender.com/allorders/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

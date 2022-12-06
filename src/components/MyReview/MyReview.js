@@ -15,7 +15,7 @@ const MyReview = () => {
   const { user } = useAuth();
 
   const onSubmit = (data) => {
-    fetch(`https://quiet-hamlet-36668.herokuapp.com/reviews`, {
+    fetch(`https://carbonizo-server-side.onrender.com/reviews`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

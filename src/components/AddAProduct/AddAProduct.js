@@ -14,7 +14,7 @@ const AddAProduct = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch(`https://quiet-hamlet-36668.herokuapp.com/allcars`, {
+    fetch(`https://carbonizo-server-side.onrender.com/allcars`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -14,7 +14,7 @@ const Cars = () => {
   const [spinnerLoading, setSpinnerLoading] = useState(false);
 
   useEffect(() => {
-    fetch("https://quiet-hamlet-36668.herokuapp.com/cars")
+    fetch("https://carbonizo-server-side.onrender.com/cars")
       .then((res) => res.json())
       .then((data) => {
         setCars(data);

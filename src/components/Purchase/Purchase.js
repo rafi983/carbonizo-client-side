@@ -12,7 +12,7 @@ const Purchase = () => {
   const { user } = useAuth();
   const [singleCar, setSingleCar] = useState({});
   useEffect(() => {
-    fetch(`https://quiet-hamlet-36668.herokuapp.com/allcars/${id}`)
+    fetch(`https://carbonizo-server-side.onrender.com/allcars/${id}`)
       .then((res) => res.json())
       .then((data) => setSingleCar(data));
   }, []);

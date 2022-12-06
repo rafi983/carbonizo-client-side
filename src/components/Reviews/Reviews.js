@@ -13,7 +13,7 @@ const Reviews = () => {
   const [spinnerLoading, setSpinnerLoading] = useState(false);
 
   useEffect(() => {
-    fetch("https://quiet-hamlet-36668.herokuapp.com/reviews")
+    fetch("https://carbonizo-server-side.onrender.com/reviews")
       .then((res) => res.json())
       .then((data) => {
         setReviews(data);

@@ -11,7 +11,7 @@ const MakeAdmin = () => {
   const handleAdminSubmit = (e) => {
     e.preventDefault();
     const user = { email };
-    fetch("https://quiet-hamlet-36668.herokuapp.com/users/admin", {
+    fetch("https://carbonizo-server-side.onrender.com/users/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",
