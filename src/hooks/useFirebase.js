@@ -88,14 +88,14 @@ const useFirebase = () => {
   }, []);
 
   useEffect(() => {
-    fetch(`https://quiet-hamlet-36668.herokuapp.com/users/${user?.email}`)
+    fetch(`https://carbonizo-server-side.onrender.com/users/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
   }, [user?.email]);
 
   const saveUser = (email, displayName, method) => {
     const user = { email, displayName };
-    fetch("https://quiet-hamlet-36668.herokuapp.com/users", {
+    fetch("https://carbonizo-server-side.onrender.com/users", {
       method: method,
       headers: {
         "content-type": "application/json",
